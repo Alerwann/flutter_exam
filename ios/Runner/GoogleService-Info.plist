@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyARvguI-uERUqKc0ahCJp-5V7l43O17g7k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>598148577554</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.dailyfamilymessage</string>
+	<key>PROJECT_ID</key>
+	<string>dailyfamily-2dc4a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dailyfamily-2dc4a.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:598148577554:ios:ab48f9dcb397917f4a5bcb</string>
+</dict>
+</plist>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "598148577554",
+    "project_id": "dailyfamily-2dc4a",
+    "storage_bucket": "dailyfamily-2dc4a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:598148577554:android:d5aef34e70d6c84c4a5bcb",
+        "android_client_info": {
+          "package_name": "com.example.dailyfamilymessage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPh0_zQjZnA8hY0RchyshtG99W5_FtaDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
