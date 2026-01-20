@@ -23,7 +23,11 @@ class ProfilProvider extends ChangeNotifier {
       if (kDebugMode) {
         print("load error : $e");
       }
+    } finally{
+      notifyListeners();
     }
+  
+
   }
 
   Future<bool> setPseudo(String pseudo) async {
@@ -35,12 +39,13 @@ class ProfilProvider extends ChangeNotifier {
       _pseudo = oldpseudo;
       return false;
     }
-    notifyListeners();
+
     return true;
   }
 
   Future<bool> resetPseudo() async {
     _pseudo = 'Inconnu';
+
     return await setPseudo(_pseudo);
   }
 
@@ -52,18 +57,21 @@ class ProfilProvider extends ChangeNotifier {
       _city = oldCity;
       return false;
     }
-    notifyListeners();
+
     return true;
   }
 
   Future<(bool, bool)> setAll(String pseudo, String city) async {
     final cityBool = await setCity(city);
     final pseudoBool = await setPseudo(pseudo);
+    notifyListeners();
+
     return (cityBool, pseudoBool);
   }
 
   Future<bool> resetCity() async {
     _city = 'Paris';
+
     return await setCity(_pseudo);
   }
 
@@ -74,6 +82,7 @@ class ProfilProvider extends ChangeNotifier {
     if (!pseudoSuccess || !citysuccess) {
       print("❌ Erreur lors de la réinitialisation");
     }
+    notifyListeners();
 
     return pseudoSuccess && citysuccess;
   }

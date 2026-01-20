@@ -1,6 +1,7 @@
 import 'package:dailyfamilymessage/firebase_options.dart';
 import 'package:dailyfamilymessage/pages/home.dart';
 import 'package:dailyfamilymessage/provider/profil_provider.dart';
+import 'package:dailyfamilymessage/services/notification_service.dart';
 import 'package:dailyfamilymessage/theme/app_theme.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +16,8 @@ void main() async {
 
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
-  // NotificationService notificationService = NotificationService();
-  // await notificationService.initialize();
+  NotificationService notificationService = NotificationService();
+  await notificationService.initialize();
 
   runApp(
     MultiProvider(

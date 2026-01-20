@@ -13,18 +13,18 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  late String _pseudo;
+
   @override
   Widget build(BuildContext context) {
-    final String pseudo = Provider.of<ProfilProvider>(
-      context,
-      listen: false,
-    ).pseudo;
     return Consumer<ProfilProvider>(
       builder: (context, profil, child) {
+        _pseudo = profil.pseudo;
+        print("le pseudo doit etre : $_pseudo");
         return Scaffold(
           appBar: AppBar(
             leading: Image.asset('assets/aap_icon.png', height: 50),
-            title: Text('Hi ${profil.pseudo}!', style: TextStyle(fontSize: 40)),
+            title: Text('Hi $_pseudo!', style: TextStyle(fontSize: 40)),
             actions: [
               IconButton(
                 onPressed: () {

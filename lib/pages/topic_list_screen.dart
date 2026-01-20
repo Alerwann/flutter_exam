@@ -1,6 +1,8 @@
+import 'package:dailyfamilymessage/provider/profil_provider.dart';
 import 'package:dailyfamilymessage/utils/liste_course_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:provider/provider.dart';
 
 class TopicListScreen extends StatefulWidget {
   const TopicListScreen({super.key});
@@ -14,7 +16,13 @@ class _TopicListScreenState extends State<TopicListScreen> {
   List<String> temporairCourse = [];
   bool listAugment = false;
 
+
+
   void _createTopic(BuildContext context) async {
+      final String autor = Provider.of<ProfilProvider>(
+      context,
+      listen: false,
+    ).pseudo;
     if (temporairCourse.isEmpty) return;
 
     print("=== DÉBUT ENVOI ===");
@@ -31,6 +39,7 @@ class _TopicListScreenState extends State<TopicListScreen> {
         'title': temporairCourse[i].trim(),
         'createdAt': FieldValue.serverTimestamp(),
         'silent': !estLeDernier,
+        'autor':autor,
       });
     }
 
